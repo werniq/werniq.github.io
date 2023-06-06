@@ -80,8 +80,8 @@ body {
 }
 
 .home-content {
+    width: 100%;
     margin-top: 250px;
-    max-width: 1200px;
     z-index: 101;
     height: 100vh;
 }
@@ -147,7 +147,6 @@ body {
     position: relative;
     display: flex;
     justify-content: space-between;
-    width: 345px;
     height: 50px;
 }
 
@@ -218,19 +217,12 @@ body {
 }
 
 .home-sci {
-    margin-left: 70%;
-    position: absolute;
-    bottom: 40px;
-    width: 170px;
-    display: flex;
     justify-content: space-between;
 }
 
 .home-sci::before {
     content: '';
     position: absolute;
-    top: 0;
-    right: 0;
     width: 100%;
     height: 100%;
     background: #081b29;
@@ -264,9 +256,6 @@ body {
 .home-sci a::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
     height: 100%;
     background: crimson;
     z-index: -1;
@@ -276,38 +265,6 @@ body {
 .home-sci a:hover::before {
     width: 100%;
 }
-
-.home-imgHover {
-    position: absolute;
-    top: 0;
-    right: 30px;
-    width: 500px;
-    height: 100%;
-    background: transparent;
-    transition: 3s;
-    animation: manipActiveHover .1s forwards;
-    animation-delay: 4s;
-    pointer-events: none;
-}
-
-.home-imgHover:hover {
-    background: #081b29;
-    opacity: .8;
-}
-
-.home-imgHover::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 135%;
-    height: 100%;
-    background: #081b29;
-    animation: showRight 1s ease forwards;
-    animation-delay: 3s;
-    z-index: 100;
-}
-
 
 /* KEYFRAMES ANIMATION */
 @keyframes showRight {
@@ -332,6 +289,7 @@ body {
 
 .home-content-2 h1 {
     position: relative;
+    width: 100%;
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
@@ -371,6 +329,7 @@ body {
 
 .home-content-2 p {
     position: relative;
+    width: 100%;
     font-size: 16px;
     margin: 20px 0 40px;
 }
@@ -406,4 +365,32 @@ body {
     animation: showRight 1s ease forwards;
     animation-delay: 1.9s;
     z-index: 2;
+}
+
+@media screen and (max-width: 800px) {
+    .home-content {
+        margin-top: 400px;
+    }
+
+    .btn-box {
+        justify-content: ;
+    }
+
+    .home-content-2 {
+        margin-top: 1100px;
+        max-width: 100%;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50%;
+        padding: 20px 10%;
+        background: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
 }
